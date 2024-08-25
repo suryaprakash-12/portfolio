@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <title>Document</title>
+</head>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+    }
+    body{
+        background-color: black;
+    }
+    header{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        height: 100px;
+        width: 100%;
+        font-family:Verdana, Geneva, Tahoma, sans-serif ;
+    }
+    header span{
+        color: darkblue;
+    }
+    header h1{
+        color: white;
+        font-size: 40px;
+    }
+    header nav ul{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 50px;
+    }
+    header nav ul li{
+        list-style: none;
+        color: white;
+        font-size: 20px;
+    }
+    header nav ul li:hover{
+        color: blue;
+    }
+    .profile button{
+        height: 45px;
+        width: 150px;
+        border-radius: 25px;
+        border: none;
+        background-color:darkblue;
+        color: white;
+        font-size: 20px;
+        box-shadow: 5px 5px 5px rgb(92, 92, 92);
+    }
+    .profile button:active{
+        transform: scale(0.9);
+        box-shadow: 3px 3px 3px rgb(92, 92, 92);
+    }
+    .main{
+        height: 600px;
+        width: 85%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .name{
+        height: 600px;
+        width: 45%;
+        float: left;
+        color: white;
+    }
+    .name h1{
+        overflow: hidden;
+        border-right: 5px solid rgb(220, 220, 238);
+        font-size: 60px;
+        margin-top: 30%;
+        color: blue;
+        width: 50%;
+        white-space: nowrap;
+        animation: type 4s steps(40, end) infinite;
+    }
+    @keyframes type {
+        from{
+            width: 0;
+        }
+        to{
+            width: 60%;
+        }
+    }
+    .name h2{
+        font-size: 50px;
+    }
+    .img{
+        display: grid;
+        place-items: center;
+        height: 600px;
+        width: 50%;
+        float: right;
+    }
+    .img img{
+        position: relative;
+        border-radius: 50%;
+        object-fit: cover;
+    }
+    .img::before{
+        content: " ";
+        width: 30%;
+        height: 60%;
+        border-radius: 50%;
+        position: absolute;
+        background: linear-gradient(rgb(104, 104, 215),rgb(32, 32, 181));
+        box-shadow: 0 0 70px blue;
+        animation: glow 2s liner infinite;
+    }
+  
+    .icons{
+        display: flex;
+        gap: 20px;
+    }
+    .icons i{
+        border: 2px solid blue;
+        font-size: 25px;
+        padding: 10px;
+        border-radius: 50%;
+        color: white;
+        box-shadow: 0 0 20px rgb(2, 2, 252);
+    }
+</style>
+<body>
+    <header>
+        <div class="logo">
+            <h1>
+                <span>Port</span>folio
+            </h1>
+        </div>
+        <nav>
+            <ul>
+                <li>HOME</li>
+                <li>ABOUT</li>
+                <li>RESUME</li>
+                <li>CONTACT</li>
+            </ul>
+        </nav>
+        <div class="profile"><button>
+             profile
+        </button></div>
+    </header>
+    <div class="main">
+        <div class="name">
+            <h1>
+                Balasankar
+            </h1>
+            <h2>
+                I am Frontend and Backend developer also<br>
+                 a frontend designer
+            </h2><br>
+            <div class="icons">
+                <i class="bx bxl-facebook"></i>
+                <i class="bx bxl-linkedin"></i>
+                <i class="bx bxl-instagram"></i>
+                <i class="bx bxl-whatsapp"></i>
+                <i class="bx bxl-github"></i>
+            </div>
+        </div>
+        <div class="img">
+            <img src="./balasankar.jpg" alt="" height="400" width="400">
+        </div>
+    </div>
+</body>
+</html>
