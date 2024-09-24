@@ -4,49 +4,1223 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
     <title>Document</title>
-    <link rel="icon" type="x-icon" href="./img/balasankar.jpg">
 </head>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+    }
+    html{
+        scroll-behavior: smooth;
+    }
+    body{
+        background-color: rgb(23, 23, 23);
+        background-size: cover;
+        width: 100%;
+    }
+.header{
+  background:url('../Untitled\ design.png');
+  background-size:cover ;
+  height: 745px;
+  width: 100%;
+    }
+    .img img{
+      border-radius: 30px;
+      object-fit: cover;
+    }
+    .header-inner{
+        height: 745px;
+        width: 90%;
+        margin-left: auto;
+      margin-right: 10%;
+      display: flex;
+      align-items: center;
+    justify-content: space-around;
+    gap: 100px;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    }
+    .content{width: 50%;}
+    .content h1{
+        color: white;
+        font-size: 50px;
+    }
+
+    .content h1 span{
+        color: gold;
+        margin-left: 10px;
+    }
+    .content p{
+        color: rgb(177, 177, 177);
+        font-size: 20px;
+    }
+    .content button,.info-detail button,.contact button{
+        background: transparent;
+        color: white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 50px;
+        width: 250px;
+        border: 1px solid gold;
+        border-radius: 30px;
+        padding-right: 50px;
+       
+    }
+
+    .content button i,.info-detail button i,
+    .contact button i{
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+       position: absolute;
+       margin-left: 17%;
+        font-size: 20px;
+        height: 50px;
+        width: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: gold;
+        border-radius: 50px;
+    }
+    nav{
+        position: fixed;
+        margin-left: 105%;
+        margin-top: -5%;
+        display: block;
+    }
+    nav ul{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 5px;
+        height: 300px;
+        width: 100px;
+    }
+
+   nav ul li{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    list-style: none;
+    background: rgba(157, 157, 157, 0.3);
+   padding: 10px 12px;
+    border-radius: 50px;
+    transition: 0.3s;
+   }
+   nav ul li a{
+    text-decoration: none;
+    font-size: 30px;
+   }
+   .icon{
+    color: white;
+   }
+   
+   .title{
+    position: absolute;
+    right:25px;
+    visibility: hidden; 
+    opacity: 0;
+    transition: 0.5s;
+    width: 100%;
+    height: 16%;
+    margin-top: -40px;
+    border-radius: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    background-color: gold;
+    color: white;
+   }
+   nav ul li:hover a .title{
+    visibility: visible;
+    opacity: 1;
+    width: 200%;
+    height: 16%;
+    z-index: -1;
+}
+nav ul li:hover{
+    background-color: gold;
+    color: white;
+}
+ #active{
+    background-color: gold;
+    color: white;
+ } 
+ .about{
+    height: 1800px;
+    width: 90%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+ }
+ .about-cont{
+    height: 100px;
+ }
+ .skill-cont h1{
+    text-align: center;
+ }
+ .about-cont h1,.skill-cont h1{
+    color: white;
+    font-size: 40px;
+    font-weight: bolder;
+ }
+ .about-cont h1 span,.skill-cont h1 span{
+    color: gold;
+ }
+ .about-wrapper{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 150px;
+ }
+ .info h2{
+    color:gold;
+    margin-right: 60%;
+ }
+ .info{
+    height: 500px;
+    width:45%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+ }
+ .info-inner{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 100px;
+    font-size: 20px;
+    margin-left: 20%;
+ }
+ .info-detail{
+    color: white;
+    
+}
+    .info-detail span{
+        color: rgb(171, 171, 171);
+    }
+    .info-set{
+    height: 400px;
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    }
+    .info-set .set{
+     border: 2px solid rgb(45, 45, 45);
+     height: 150px;
+     width: 230px;
+    }
+    .set h1{
+        margin-left: 20px;
+        color: gold;
+        font-size: 45px;
+    }
+    .set p{
+        color: white;
+        font-size: 18px;
+       display: flex;
+       align-items: center;
+       justify-content: center;
+    }
+    .set-inner{
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+    }
+    .progress-ring {
+    transform: rotate(-90deg);
+    }
+
+    .progress-ring-circle,.progress-ring-circles,.progress-ring-circles1,
+    .progress-ring-circles2,.progress-ring-circles3,.progress-ring-circles4,.progress-ring-circles5,
+    .progress-ring-circles6 {
+    stroke-dasharray: 316;
+    stroke-dashoffset: 316;
+    transition: stroke-dashoffset 0.3s;
+    
+}
+#per,#per1,#per2,#per3,#per4,
+#per5,#per6,#per7{
+    position: absolute;
+    color: white;
+    margin-top:-1.5%;
+    margin-left: 3%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+   transform: translateY(-50px);
+}
+.skils{
+    height: 500px;
+    width: 90%;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center
+}
+.skils p{
+    text-align: center;
+    color: white;
+}
+.skill-inner{
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+.skill-wrap{
+    display: flex;
+    gap: 150px;
+}
+.skill-cont h1{
+    height: 100px;
+}
+.education{
+    height: 800px;
+    width: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.edu-inner{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+.edu1{
+    display: flex;
+    gap: 70px;
+}
+.education-cont,.about-cont{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 150px;
+    width: 90%;
+ color: white;
+}
+.pro-cont h1,.contact-cont h1{
+    color: white;
+    font-size: 50px;
+}
+.education-cont h1 span,
+.pro-cont h1 span,.contact-cont h1 span{
+    color: gold;
+}
+.education-wrap{
+    color: white;
+    display: flex;
+    gap: 10px;
+}
+.education-wrap h1{
+    font-size: 20px;
+}
+.education-wrap h1 span{
+    font-size: 25px;
+    color: gold;
+}
+.para{
+    padding-top: 10px;
+}
+.edu1:nth-child(2),.edu1:nth-child(3){
+    gap: 100px;
+}
+.edu-set{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.edu-icon{
+    background: rgb(117, 117, 117,0.5);
+    font-size: 23px;
+    padding: 8px;
+    border-radius: 50px;
+    color: gold;
+}
+.vertical{
+    background-color: rgb(122, 122, 122);
+    height: 100px;
+    width: 2px;
+}
+.project,.contact{
+    height: 900px;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.pro-wrap{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    margin-right: 3%;
+}
+.pro1{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+}
+.pro-cont{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100px;
+    
+}
+.shade{
+    position: absolute;
+    font-size: 120px;
+    color: rgba(128, 128, 128,0.3);
+    z-index: -1;
+}
+.pro1 img{
+    border-radius: 20px;
+}
+.pro1 span{
+    height: 200px;
+    width: 350px;
+    position: relative;
+    overflow: hidden;
+}
+.pro1 span::before{
+content: '';
+position: absolute;
+background-color: gold;
+width: 0%;
+height: 100%;
+left: 0;
+top: 0;
+border-radius: 20px;
+transition: all 0.4s ease-in-out;
+}
+.pro1 span:hover::before{
+    width: 100%;
+}
+.btn1{
+    width: 120px;
+    height: 35px;
+    border-radius: 20px;
+    font-size: 20px;
+    border: none;
+    outline: none;
+    background: white;
+    color: gold;
+    position: absolute;
+    transform: translateY(-50%) scale(0);
+    top: 50%;
+    left:0;
+    opacity: 0;
+    box-shadow: 0 0 10px black;
+    transition:  all 0.4s ease-in-out ;
+}
+.pro1 span:hover .btn1{
+    transform: translateY(-50%) scale(1);
+    left: 35%;
+    opacity: 1;
+}
+.contact-wrapper,.contact-cont{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.contact-wrapper{
+    gap: 20px;
+}
+.pro-cont {
+    height: 200px;
+}
+.contact-cont{
+    height: 60px;
+}
+.mail,.phone{
+    display: flex;
+}
+.detail{
+height: 500px;
+width: 30%;
+display: flex;
+flex-direction: column;
+justify-content: center;
+gap: 30px;
+}
+.detail ul,.details-inner{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+.details-inner{
+    gap: 10px;
+}
+.detail ul li{
+list-style: none;
+font-size: 25px;
+color: white;
+padding: 12px;
+background: rgb(91, 91, 91,0.6);
+border-radius: 50%;
+display: grid;
+place-items: center;
+}
+.detail ul li:hover{
+    background-color: gold;
+}
+.detail h2{
+    color: white;
+}
+.mail h3,.phone h3{
+    color: rgb(177, 176, 176);
+} 
+
+.detail p{
+    color: white;
+}
+.details{
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+.contact{
+    height: 700px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.contact-cont{
+    height: 150px;
+    width: 100%;
+
+}
+.detail h2{font-size: 30px;}
+.detail p{font-size: 20px;}
+:is(.mail,.phone) span i{
+font-size: 25px;
+padding: 8px;
+color: black;
+background: gold;
+border-radius: 10px;
+}
+:is(.mail,.phone) span p{ 
+    color: white;
+}
+.mail,.phone{
+    display: flex;
+    gap: 20px;
+}
+.details-inner input{
+    height: 30px;
+    width: 250px;
+    background:rgba(143, 143, 143, 0.6) ;
+    border-radius: 20px;
+    padding: 5px 15px;
+    border: none;
+    outline: none;
+}
+textarea{
+    border-radius: 20px;
+    padding: 5px 15px;
+    background:rgba(143, 143, 143, 0.6) ;
+    border:1px solid gold ;
+    outline: none;
+}
+
+textarea::placeholder{
+    color:white;
+    font-size: 16px;
+}
+::placeholder{
+    color:white;
+}
+.details button ,:is(.content,.info-detail) button span{
+    color: white;
+    position: relative;
+}
+/* .details button::before{
+    position: absolute;
+    content: '';
+    width: 100%;
+    height:100%;
+    background-color: aqua;
+} */
+:is(.info-detail,.content) button{
+    border-radius: 30px;
+    position: relative;
+    overflow: hidden;
+    font-weight: bold;
+ }
+ :is(.info-detail,.content) button::before{
+    height: 50px;
+    width: 250px;
+    position: absolute;
+    border-radius: 30px;
+    content: '';
+    width: 0%;
+    height:100%;
+    background-color: gold;
+    left: 0;
+    transition: all 0.4s ease-in-out;
+ }
+.details span{
+    margin-right:70% ;
+    border-radius: 23px;
+    position: relative;
+    overflow: hidden;
+    font-weight: bold;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.details span::before{
+    position: absolute;
+    content: '';
+    width: 0%;
+    height:100%;
+    background-color: gold;
+    left: 0;
+    transition: all 0.4s ease-in-out;
+}
+.details span:hover::before,:is(.info-detail,.content) button:hover::before{
+    width: 100%;
+}
+
+.details span button i,:is(.info-detail,.content) button i{
+    margin-left: 101%;
+    border-radius: 23px;
+}
+.res-nav{
+    display: none;
+}
+@media (max-width:1400px) {
+    .about-wrapper{
+        flex-direction: column;
+        gap: 5px;
+    }
+    .about{
+        height: 3300px;
+    }
+    .info-inner{
+        width: 700px;
+        font-size: 25px;
+        margin-right: 100px;
+        gap: 10px;
+        
+    }
+    .info{
+        /* background-color: aqua; */
+        width: 100%;
+    }
+    .contact-wrapper{
+        flex-direction: column;
+    }
+    .pro1 span img,.pro1 span {
+        height: 150px;
+        width: 200px;
+    }
+    .pro1,.pro-wrap{
+        gap: 30px;
+    }
+    #per,#per1,#per2,#per3,#per4,
+#per5,#per6,#per7{
+    margin-top: -20px;
+    margin-left: 40px;
+}
+   /* .pro-cont{
+    margin-top: 23%;
+   } */
+    .skill-wrap{
+        gap: 70px;
+    }
+    .detail{
+        width: 70%;
+    }
+    .pro1 span:hover .btn1{
+     left: 35px;
+    }
+    .details-inner input{
+        width: 200px;
+    }
+    textarea{
+        width: 700px;
+    }
+    .project{
+        margin-top: -50%;
+    }
+}
+@media (max-width:900px) {
+    .header-inner{
+        height: 1200px;
+        flex-direction: column;
+        gap: 10px;
+    }
+    .info-inner{
+        gap: 20px;
+    }
+    .info-inner{
+        width: 500px;
+        font-size: 20px;
+        padding-right: 50px;
+    }
+    .content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+       width: 700px;
+    }
+}
+@media (max-width:786px) {
+    .res-nav{
+      display: block;
+    }  
+    .logo{
+        background-color: goldenrod;
+        height: 50px;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+    .res-nav a{
+      text-decoration: none;
+    }
+    .res-nav li{
+        padding-top: 50px;
+    }
+    .logo i{
+        font-size: 25px;
+    }
+     .ul{
+        position: absolute;
+        width: 100%;
+        height: 350px;
+        background-color: gold;
+        font-size: 18px;
+        font-weight: bold;
+        color: black;
+        list-style: none;
+        padding-left: 50%;
+        
+    }
+    .nav{
+        display: none;
+    }
+    nav{
+        display: none;
+    }
+    .header-inner{
+        height: 1300px;
+        flex-direction: column;
+        gap: 10px;
+    }
+    .content{
+        width: 460px;
+        margin-left: 15%;
+    }
+    .content h1{
+        font-size: 40px;
+    }
+    .info-inner{
+        flex-direction: column;
+        width: 300px;
+
+    }
+    .skill-wrap{
+        gap: 1px;
+        width: 460px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+  
+    }
+    .about{
+        height: 4800px;
+        
+    }
+    .about-wrapper{
+        height: 1500px;
+    }
+    .edu1{
+        flex-direction: column;
+    }
+    .education{
+        height: 1300px;
+       
+    }
+    .edu-inner{
+        gap: 5px;
+    }
+    .project{
+        margin-top: -50%;
+    } 
+    .pro1 span img,.pro1 span {
+        height: 150px;
+        width: 200px;
+    }
+    .pro1 span:nth-child(3){
+        display: none;
+    } 
+    .details-inner{
+        display: grid;
+        grid-template-columns: auto auto;
+    }
+    textarea{
+        width: 300px;
+    }
+    .shade{
+        font-size: 50px;
+    }
+    .set-inner,.info-set{
+        gap: 10px;
+    }
+    .details-inner input{
+        height: 30px;
+        width: 170px;
+    }
+    .details{
+        width: 450px;
+    }
+    .info-set{
+        height: 800px;
+        flex-direction: column;
+    }
+    .details span{
+        margin-left: 25%;
+    }
+    /* .header-inner,.about,.contact,.project{
+        background-color: aqua;
+    } */
+    
+    .skill-wrap{
+        display: grid;
+        grid-template-columns: auto auto;
+    }
+    .skill-inner{
+        gap: 0px;
+    }
+    .skils{
+        height: 1000px;
+    }
+    .actives{
+        display: block;
+    }
+}
+</style>
+
 <body>
-    <header>
+    <div class="res-nav">
         <div class="logo">
-            <h1>
-                <span>Port</span>folio
-            </h1>
+            <h1>Portfolio</h1>
+            <div id="menu"><i class="bx bx-menu"></i></div>
         </div>
-        <nav>
-            <ul>
-                <li>HOME</li>
-                <li>ABOUT</li>
-                <li>RESUME</li>
-                <li>CONTACT</li>
-            </ul>
-        </nav>
-        <div class="profile"><button>
-             profile
-        </button></div>
-    </header>
-    <div class="main">
-        <div class="name">
-            <h1>
-                Balasankar
-            </h1>
-            <h2>
-                I am Frontend and Backend developer also<br>
-                 a frontend designer
-            </h2><br>
-            <div class="icons">
-                <i class="bx bxl-facebook"></i>
-                <i class="bx bxl-linkedin"></i>
-                <i class="bx bxl-instagram"></i>
-                <i class="bx bxl-whatsapp"></i>
-                <i class="bx bxl-github"></i>
+    <div class="nav" id="nav">
+        <ul class="ul" id="ul">
+            <li><a href="#project">PROJECT</a></li>
+            <li><a href="#about">ABOUT</a></li>
+            <li><a href="#education">RESUME</a></li>
+            <li><a href="#contact">CONTACT</a></li>
+        </ul>
+    </div>
+    </div>
+    <div class="header" id="home">
+        <div class="header-inner">
+     <div class="img">
+        <img src="./balasankar.jpg" alt="" height="600" width="350">
+    </div>
+       <div class="content">
+        <h1 style="color: gold;"> &minus;<span> I'M SURYA PRAKASH.</span></h1>
+        <h1 style="margin-left: 50px;">WEB DESIGNER</h1>
+        <br>
+        <P>Lorem ipsum dolor sit amet consectetur adipisicing elit.<br><br>
+             Commodi odit tempore eos placeat dicta. Vitae eligendi
+              voluptate tempora<br><br> deleniti maiores nam doloremque a id, ab voluptatum dolorum,
+               atque hic<br><br> dicta. Lorem ipsum dolor sit amet consectetur adipisicing elit. </P>
+               <br><br>
+
+               <button><span>MORE ABOUT ME </span><i class="bx bx-right-arrow-alt"></i></button>
+       </div>
+       <nav>
+        <ul>
+            <li id="active"><a href="#home">
+                <span class="icon" ><i class="bx bx-home"></i></span>
+                <span class="title">HOME</span>
+            </a></li>
+
+            <li><a href="#project">
+                <span class="icon"><i class='bx bxl-product-hunt'></i></span>
+                <span class="title">project</span>
+            </a></li>
+
+            <li><a href="#about">
+                <span class="icon"><i class="bx bx-user"></i></span>
+                <span class="title">ABOUT</span>
+                <a></li>
+
+             <li><a href="#education">
+               <span class="icon"><i class="bx bx-file"></i></span>
+                 <span class="title">RESUME</span>
+                </a></li>
+
+            <li><a href="#contact">
+                <span class="icon"><i class='bx bx-phone'></i></span>
+                <span class="title">CONTACT</span>
+            </a></li>
+
+        </ul>
+       </nav>
+    </div>
+    </div>
+    <div class="about" id="about">
+        <div class="about-cont">
+            <span class="shade">RESUME</span>
+     <h1>ABOUT <span>ME</span></h1>
+     </div>
+     <div class="about-wrapper">
+     <div class="info">
+        <h2>PERSONAL INFOS</h2><br><br>
+        <div class="info-inner">
+        <div class="info-detail">
+        <span>First Name:</span>Surya<br><br>
+        <span>Last Name:</span>Prakash<br><br>
+        <span>Age:</span>22Years<br><br>
+        <span>Nationality:</span>India<br><br>
+        <span>Freelance:</span>Available<br><br><br><br>
+        <button><span>DOWNLOAD CV</span> <i class="bx bx-download"></i></button>
+        </div>
+        <div class="info-detail">
+            <span>Address:</span>Tamil Nadu<br><br>
+            <span>Phone:</span>+91 9345554762<br><br>
+            <span>Email:</span>suryaprakash934555@gmail.com<br><br>
+            <span>Nationality:</span>India<br><br>
+            <span>Language:</span>Tamil,English<br><br><br><br><br><br>
             </div>
         </div>
-        <div class="img">
-            <img src="./img/balasankar.jpg" alt="" height="400" width="400">
+     </div>
+     <div class="info-set">
+        <div class="set-inner">
+            <div class="set"><h1>12+</h1><br>
+            <p>&minus; YEARS OF <br> EXPERIENCE</p>
+            </div>
+            <div class="set"><h1>10+</h1><br>
+                <p>&minus; COMPLETED <br> PROJECTS</p>
+            </div>
+        </div>
+        <div class="set-inner">
+            <div class="set"><h1>2+</h1><br>
+            <p>&minus; HAPPY <br> CUSTOMER</p>
+            </div>
+            <div class="set"><h1>3+</h1><br>
+                <p>&minus; CLONE <br> WEBSITES</p>
+            </div>
+        </div>
+     </div>
+    </div>
+    <div class="skils">
+        <div class="skill-cont">
+            <h1>MY <span>SKILLS</span></h1>
+        </div><br><br>
+        <div class="skill-inner">
+            <div class="skill-wrap">
+        <div class="progress">
+        <div class="progress-ring">
+            <svg width="120" height="120" style="position: relative;">
+                <circle class="progress-ring-circle" stroke="gold" stroke-width="6" fill="black" r="45" cx="60" cy="60"></circle>
+            </svg>
+        </div>
+        <p id="per">0%</p>
+        <p>HTML</p>
+       </div>
+
+       <div class="progress">
+        <div class="progress-ring">
+            <svg width="120" height="120" style="position: relative;">
+                <circle class="progress-ring-circles" stroke="gold" stroke-width="6" fill="black" r="45" cx="60" cy="60"></circle>
+            </svg>
+        </div>
+        <p id="per1">0%</p>
+        <p>JAVASCRIPT</p>
+       </div>
+
+       <div class="progress">
+        <div class="progress-ring">
+            <svg width="120" height="120" style="position: relative;">
+                <circle class="progress-ring-circles1" stroke="gold" stroke-width="6" fill="black" r="45" cx="60" cy="60"></circle>
+            </svg>
+        </div>
+        <p id="per2">0%</p>
+        <p>CSS</p>
+       </div>
+
+       <div class="progress">
+        <div class="progress-ring">
+            <svg width="120" height="120" style="position: relative;">
+                <circle class="progress-ring-circles2" stroke="gold" stroke-width="6" fill="black" r="45" cx="60" cy="60"></circle>
+            </svg>
+        </div>
+        <p id="per3">0%</p>
+        <p>PHP</p>
+       </div>
+
+      </div>
+       
+      <div class="skill-wrap">
+       <div class="progress">
+        <div class="progress-ring">
+            <svg width="120" height="120" style="position: relative;">
+                <circle class="progress-ring-circles3" stroke="gold" stroke-width="6" fill="black" r="45" cx="60" cy="60"></circle>
+            </svg>
+        </div>
+        <p id="per4">0%</p>
+        <p>BOOTSTARP</p>
+       </div>
+
+       <div class="progress">
+        <div class="progress-ring">
+            <svg width="120" height="120" style="position: relative;">
+                <circle class="progress-ring-circles4" stroke="gold" stroke-width="6" fill="black" r="45" cx="60" cy="60"></circle>
+            </svg>
+        </div>
+        <p id="per5">0%</p>
+        <p>JQUERY</p>
+       </div>
+
+       <div class="progress">
+        <div class="progress-ring">
+            <svg width="120" height="120" style="position: relative;">
+                <circle class="progress-ring-circles5" stroke="gold" stroke-width="6" fill="black" r="45" cx="60" cy="60"></circle>
+            </svg>
+        </div>
+        <p id="per6">0%</p>
+        <p>REACT</p>
+       </div>
+
+       <div class="progress">
+        <div class="progress-ring">
+            <svg width="120" height="120" style="position: relative;">
+                <circle class="progress-ring-circles6" stroke="gold" stroke-width="6" fill="black" r="45" cx="60" cy="60"></circle>
+            </svg>
+        </div>
+        <p id="per7">0%</p>
+        <p>NODE</p>
+       </div>
+       </div>
+       </div>
+       </div>
+       <div class="education" id="education">
+        <div class="education-cont">
+            <h1>EXPERIENCE & <span>EDUCATION</span></h1>
+        </div>
+        <div class="edu-inner">
+        <div class="edu1">
+        <div class="education-wrap">
+            <div class="edu-set">
+            <span class="edu-icon"><i class="bx bxs-shopping-bag-alt"></i></span>
+            <span class="vertical"></span>
+        </div>
+        <div>
+           <p class="para">2025</p><br><br>
+           <h1><span>BATCHULAR OF ENGINEERING</span>&minus;ANNA UNIVERSITY</h1>
+           <P>Lorem, ipsum dolor sit amet consectetur adipisicing elit. <br> Reiciendis consectetur praesentium rerum enim laudantium beatae </P>
+           </div>
+        </div>
+        <div class="education-wrap">
+            <div class="edu-set">
+            <span class="edu-icon"><i class="bx bxs-shopping-bag-alt"></i></span>
+            <span class="vertical"></span>
+        </div>
+        <div>
+           <p class="para">2024</p><br><br>
+           <h1><span>WEB DEVELOPER</span>&minus;CODEBIND TECHNOLOGY</h1>
+           <P>Lorem, ipsum dolor sit amet consectetur adipisicing elit. <br> Reiciendis consectetur praesentium rerum enim laudantium beatae </P>
+       </div>       
+       </div>
+        </div>
+        <div class="edu1">
+        <div class="education-wrap">
+            <div class="edu-set">
+            <span class="edu-icon"><i class="bx bxs-shopping-bag-alt"></i></span>
+            <span class="vertical"></span>
+        </div>
+        <div>
+           <p class="para">2024</p><br><br>
+           <h1><span>FIGMA DESIGNER</span>&minus;FREECODECAMP</h1>
+           <P>Lorem, ipsum dolor sit amet consectetur adipisicing elit. <br> Reiciendis consectetur praesentium rerum enim laudantium beatae</P>
+           </div>
+        </div>
+        <div class="education-wrap">
+            <div class="edu-set">
+            <span class="edu-icon"><i class="bx bxs-shopping-bag-alt"></i></span>
+            <span class="vertical"></span>
+        </div>
+        <div>
+           <p class="para">2023</p><br><br>
+           <h1><span>REACT</span>&minus;SCALAR COMMUNITY</h1>
+           <P>Lorem, ipsum dolor sit amet consectetur adipisicing elit. <br> Reiciendis consectetur praesentium rerum enim laudantium beatae </P>
+           </div>
+        </div>
+        </div>
+        <div class="edu1">
+        <div class="education-wrap">
+            <div class="edu-set">
+            <span class="edu-icon"><i class="bx bxs-shopping-bag-alt"></i></span>
+            <span class="vertical"></span>
+        </div>
+        <div>
+           <p class="para">2023</p><br><br>
+           <h1><span>NODE JS</span>&minus;FREECODECAMP</h1>
+           <P>Lorem, ipsum dolor sit amet consectetur adipisicing elit. <br> Reiciendis consectetur praesentium rerum enim laudantium beatae </P>
+           </div>
+        </div>
+        <div class="education-wrap">
+            <div class="edu-set">
+            <span class="edu-icon"><i class="bx bxs-shopping-bag-alt"></i></span>
+            <span class="vertical"></span>
+        </div>
+        <div>
+           <p class="para">2024</p><br><br>
+           <h1><span>BOOOTSTARP</span>&minus;FREECODECAMP</h1>
+           <P>Lorem, ipsum dolor sit amet consectetur adipisicing elit. <br> Reiciendis consectetur praesentium rerum enim laudantium beatae</P>
+           </div>
+        </div>
+        </div>
+       </div>
+       </div>
+    </div>
+    <div class="project" id="project">
+        <div class="pro-cont">
+            <span class="shade">PORTFOILO</span>
+            <h1>PROJECT &<span>DESIGN</span></h1>
+        </div>
+        <div class="pro-wrap">
+        <div class="pro1">
+            <span><img src="./amazon.jpg" alt="check" height="200" width="350">
+            <button class="btn1">click</button>
+            </span>
+            <span><img src="./amazon.jpg" alt="check" height="200" width="350"><button class="btn1">click</button></span>
+            <span><img src="./amazon.jpg" alt="check" height="200" width="350"><button class="btn1">click</button></span>
+        </div>
+        <div class="pro1">
+            <span><img src="./amazon.jpg" alt="check" height="200" width="350"><button class="btn1">click</button></span>
+            <span><img src="./amazon.jpg" alt="check" height="200" width="350"><button class="btn1">click</button></span>
+            <span><img src="./amazon.jpg" alt="check" height="200" width="350"><button class="btn1">click</button></span>
+        </div>
+        <div class="pro1">
+            <span><img src="./amazon.jpg" alt="check" height="200" width="350"><button class="btn1">click</button></span>
+            <span><img src="./amazon.jpg" alt="check" height="200" width="350"><button class="btn1">click</button></span>
+            <span><img src="./amazon.jpg" alt="check" height="200" width="350"><button class="btn1">click</button></span>
+        </div>
         </div>
     </div>
+    <div class="contact" id="contact">
+        <div class="contact-cont">
+            <span class="shade">CONTACT</span>
+            <h1>GET IN <span>TOUGH</span></h1>
+        </div>
+        <div class="contact-wrapper">
+            <div class="detail">
+                <h2>DON'T BE SHY!</h2>
+                <P>Feel free get in touch in with me.I'm always
+                    open to discussing new projects,creative ideas
+                    or opportunities to be part of your vision
+                </P>
+                <div class="mail">
+                    <span><i class="bx bxs-envelope"></i></span>
+                    <span>
+                        <h3>MAIL ME</h3>
+                        <p>sonydony73@gmail.com</p>
+                    </span>
+                </div>
+                <div class="phone">
+                    <span><i class="bx bxs-phone"></i></span>
+                    <span>
+                        <h3>CALL ME</h3>
+                        <p>+91 9345554762</p>
+                    </span>
+                </div>
+                <ul>
+                    <li><i class="bx bxl-facebook"></i></li>
+                    <li><i class="bx bxl-whatsapp"></i></li>
+                    <li><i class="bx bxl-twitter"></i></li>
+                    <li><i class="bx bxl-linkedin"></i></li>
+                </ul>
+            </div>
+            <div class="details">
+                <div class="details-inner">
+                <input type="text" placeholder="YOURNAME">
+                <input type="text" placeholder="YOUREMAIL">
+                <input type="text" placeholder="YOURSUBJECT">
+                </div>
+                <textarea placeholder="TYPE FEW WORDS" id="text" cols="110" rows="15"></textarea>
+                <span><button>SEND ME <i class="bx bx-send"></i></button></span>
+            </div>
+        </div>
+    </div>
+    </div>
+    <script>
+   let load = 0; 
+   let load1=0;
+   let load2=0;
+   let load3=0;
+   let load4=0;
+   let=load5=0;
+   let load6=0;
+   let load7=0;
+   function loads(){
+    load +=load<96;
+    load1 +=load1<87; 
+    load2 +=load2<75; 
+    load3 +=load3<70; 
+    load4 +=load4<65;
+    load5 +=load5<70;
+    load6 +=load6<50;
+    load7 +=load7<65; 
+
+    per.innerHTML=load +"%";
+    per1.innerHTML=load1 +"%";
+    per2.innerHTML=load2 +"%";
+    per3.innerHTML=load3 +"%";
+    per4.innerHTML=load4 +"%";
+    per5.innerHTML=load5 +"%";
+    per6.innerHTML=load6 +"%";
+    per7.innerHTML=load7 +"%"; 
+    const dash=316 - (270 * load) / 100;
+    const dash1=316 - (270 * load1) / 100;
+    const dash2=316 - (270 * load2) / 100;
+    const dash3=316 - (270 * load3) / 100;
+    const dash4=316 - (270 * load4) / 100;
+    const dash5=316 - (270 * load5) / 100;
+    const dash6=316 - (270 * load6) / 100;
+    const dash7=316 - (270 * load7) / 100;
+  document.querySelector('.progress-ring-circle') .style.strokeDashoffset=dash;
+  document.querySelector('.progress-ring-circles') .style.strokeDashoffset=dash1;
+  document.querySelector('.progress-ring-circles1').style.strokeDashoffset=dash2;  
+  document.querySelector('.progress-ring-circles2').style.strokeDashoffset=dash3;  
+  document.querySelector('.progress-ring-circles3').style.strokeDashoffset=dash4;  
+  document.querySelector('.progress-ring-circles4').style.strokeDashoffset=dash5;  
+  document.querySelector('.progress-ring-circles5').style.strokeDashoffset=dash6;  
+  document.querySelector('.progress-ring-circles6').style.strokeDashoffset=dash7; 
+
+}  
+setInterval(loads, 20);
+
+document.getElementById("menu").addEventListener("click",()=>{
+    document.getElementById("nav").classList.toggle("actives")
+    document.getElementById("ul").style.display="block";
+})
+document.getElementById("ul").addEventListener("click",()=>{
+    document.getElementById("ul").style.display="none";
+})
+    </script>
 </body>
 </html>
